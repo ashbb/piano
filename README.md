@@ -49,3 +49,5 @@ References
 
 - [Note names, MIDI numbers and frequencies](http://www.phys.unsw.edu.au/jw/notes.html)
 - [Piano Chord CLIP](http://www.piano-c.com/pianoClip.html) (Japanese)
+- [Ruby/DL](http://ttsky.net/ruby/ruby-dl.html)
+- [MSDN Library](http://msdn.microsoft.com/en-us/library/default.aspx) - [midiOutOpen](http://msdn.microsoft.com/en-us/library/ms711632(VS.85).aspx), [midiOutShortMsg](http://msdn.microsoft.com/en-us/library/ms711632(VS.85).aspx)
