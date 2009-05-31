@@ -1,7 +1,7 @@
 # piano.rb
 require 'midi_winmm'
 
-Shoes.app :width => 440, :height => 240, :title => 'piano v0.1a' do
+Shoes.app :width => 440, :height => 240, :title => 'piano v0.2' do
   background tomato..gold, :angle => 45
   
   a = %w[C D E F G A B].collect{|e| [e + '3', e + '4', e + '5']}
@@ -22,14 +22,33 @@ Shoes.app :width => 440, :height => 240, :title => 'piano v0.1a' do
   eb = edit_box :left => 10, :top => 150, :width => 420, :height => 90
   eb.text = "[60, 0.5], [64, 0.5], [67, 0.5], [0, 1.0], [[60, 64, 67], 3.0], "
   
+  imgs, codes = [], [1.0, 0.75, 0.5, 0.375, 0.25, 0.125, 0.5, 0.25]
+  8.times do |i|
+    w, h, x, y = 20, 30, 200 + i * 20, 115
+    imgs << image("../imgs/#{i}.png", 
+      :width => w, :height => h, :left => x, :top => y, :fc => nil, :code => codes[i])
+    imgs.last.style :fc => rect(:width => w, :height => h, :left => x, :top => y, 
+        :fill => rgb(0, 255, 0, 0.5), :stroke => white).hide
+  end
+  imgs[2].style[:fc].show
+  code = imgs[2].style[:code]
+  imgs.each_with_index do |img, n|
+    img.click do
+      imgs.each{|e| e.style[:fc].hide}
+      img.style[:fc].show
+      code = img.style[:code]
+      eb.text += "[0, #{code}], "  if n > 5
+    end
+  end
+  
   midi = WinMM.new
   midi.program_change 0, 1
   
   (kb_white + kb_black).each do |kb|
     kb.click do
-      midi.play kb.style[:mn], 0.5
+      midi.play kb.style[:mn], code
       msg.text = "#{kb.style[:nn]},#{kb.style[:mn]}"
-      eb.text += "[#{kb.style[:mn]}, 0.5], "
+      eb.text += "[#{kb.style[:mn]}, #{code}], "
       
       button, left, top = self.mouse
       f = flow :left => left - 10, :top => top - 25, :width => 25, :height => 25 do
