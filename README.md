@@ -18,8 +18,10 @@ Usage
 
 Songs
 -----
-`songs/sakura.song` is a traditional Japanese folk song. See [wikipedia](http://en.wikipedia.org/wiki/Sakura_Sakura).
 
+- `songs/sakura.song` is a traditional Japanese folk song. See [wikipedia](http://en.wikipedia.org/wiki/Sakura_Sakura).
+- [Silent Night](http://gardenofpraise.com/key21e.htm)
+- [Sippin' Cider Through a Straw](http://gardenofpraise.com/key21t.htm)
 
 Snapshot
 --------
@@ -28,7 +30,7 @@ Snapshot
 
 Change log
 ----------
-May 31th, 2009: Added the hovering message function (v0.1a).   
+May 31th, 2009: Added the hovering message function (v0.1a) and two songs.      
 May 30th, 2009: First release v0.1
 
 
