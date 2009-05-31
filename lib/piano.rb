@@ -1,7 +1,7 @@
 # piano.rb
 require 'midi_winmm'
 
-Shoes.app :width => 440, :height => 240, :title => 'piano v0.1' do
+Shoes.app :width => 440, :height => 240, :title => 'piano v0.1a' do
   background tomato..gold, :angle => 45
   
   a = %w[C D E F G A B].collect{|e| [e + '3', e + '4', e + '5']}
@@ -30,6 +30,13 @@ Shoes.app :width => 440, :height => 240, :title => 'piano v0.1' do
       midi.play kb.style[:mn], 0.5
       msg.text = "#{kb.style[:nn]},#{kb.style[:mn]}"
       eb.text += "[#{kb.style[:mn]}, 0.5], "
+      
+      button, left, top = self.mouse
+      f = flow :left => left - 10, :top => top - 25, :width => 25, :height => 25 do
+        oval 0, 0, 25, :fill => rgb(0, 255, 0, 0.5), :stroke => rgb(0, 255, 0, 0.5)
+        para kb.style[:nn], :stroke => red, :weight => 'bold', :size => 8
+      end
+      timer(1){f.remove}      
     end
   end
   

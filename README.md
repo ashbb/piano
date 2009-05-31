@@ -28,6 +28,7 @@ Snapshot
 
 Change log
 ----------
+May 31th, 2009: Added the hovering message function (v0.1a).   
 May 30th, 2009: First release v0.1
 
 
