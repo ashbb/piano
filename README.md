@@ -7,7 +7,9 @@ Simple Piano in Shoes. You can play the MIDI piano with the mouse. :)
 I've hacked [bleything/midiator](http://github.com/bleything/midiator/tree/master) to pick up the core MIDI interface part. :)   
 I know I can use MIDIator gem with Shoes. But I want to understand the basic MIDI usage and this tiny Shoes app doesn't need the big codes.
 
-Piano v0.1 and v0.2 are Windows version only. Hope someone helps to create the ones for Mac and Linux. ;-)
+Piano v0.1 and v0.2 are Windows version only.   
+Piano v0.3 includes the drivers for Mac and Linux. But I have no Mac and Linux... :(   
+**Hope someone attempt to run v0.3 on his/her Mac or Linux and let me know what happen.** ;-)
 
 
 Usage
@@ -31,7 +33,8 @@ Snapshot
 
 Change log
 ----------
-Jun 01th, 2009: Added more one song and improved the editing chrone function (v0.2).   
+Jun 02nd, 2009: Wrote the drivers for Mac and Linux (v0.3). But not get a chance to run so far.     
+Jun 01st, 2009: Added more one song and improved the editing chrone function (v0.2).   
 May 31th, 2009: Added the hovering message function (v0.1a) and two songs.      
 May 30th, 2009: First release v0.1
 
@@ -39,6 +42,7 @@ May 30th, 2009: First release v0.1
 To do list
 ----------
 
+- prepare drivers for Mac and Linux
 - change the keyboard color to the sound
 - create more songs
 

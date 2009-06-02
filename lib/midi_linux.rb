@@ -1,17 +1,19 @@
-# midi_winmm.rb
-require 'midi_win_lib_c'
+# midi_linux.rb
+require 'midi_linux_lib_c'
 
-class WinMM
+class MIDI
   include C
-
+  
   def initialize
-    @device = DL.malloc(DL.sizeof('I'))
-    C.midiOutOpen @device, -1, 0, 0, 0
+    @output = DL::PtrData.new(nil)
+    C.snd_rawmidi_open(nil, @output.ref, "virtual", 0)
   end
 
-  def message one, two=0, three=0
-    message = one + (two << 8) + (three << 16)
-    C.midiOutShortMsg @device.ptr.to_i, message
+  def message(*args)
+    format = "C" * args.size
+    bytes = args.pack(format).to_ptr
+    C.snd_rawmidi_write(@output, bytes, args.size)
+    C.snd_rawmidi_drain(@output)
   end
   
   def play note, duration = 0.1, channel = 0, velocity = 100

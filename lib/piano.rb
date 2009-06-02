@@ -1,7 +1,11 @@
 # piano.rb
-require 'midi_winmm'
+info PLATFORM
+require case PLATFORM
+  when /mswin/ : 'midi_win'
+  when /darwin/ : 'midi_mac'
+  else 'midi_linux' end
 
-Shoes.app :width => 440, :height => 240, :title => 'piano v0.2' do
+Shoes.app :width => 440, :height => 240, :title => 'piano v0.3' do
   background tomato..gold, :angle => 45
   
   a = %w[C D E F G A B].collect{|e| [e + '3', e + '4', e + '5']}
@@ -41,7 +45,7 @@ Shoes.app :width => 440, :height => 240, :title => 'piano v0.2' do
     end
   end
   
-  midi = WinMM.new
+  midi = MIDI.new
   midi.program_change 0, 1
   
   (kb_white + kb_black).each do |kb|
