@@ -11,6 +11,7 @@ Piano v0.1 and v0.2 are Windows version only.
 Piano v0.3 includes the drivers for Mac and Linux. But I have no Mac and Linux... :(   
 **Hope someone attempt to run v0.3 on his/her Mac or Linux and let me know what happen.** ;-)
 
+Jun 3rd: **Paul Harris** attempted to run v0.3 on his (k)ubuntu 9.04 with TiMIDIty. It worked well. Fantastic! Now need some connecting sequence by hand, so trying to find the easy way.
 
 Usage
 -----
@@ -25,6 +26,7 @@ Songs
 - [Silent Night](http://gardenofpraise.com/key21e.htm)
 - [Sippin' Cider Through a Straw](http://gardenofpraise.com/key21t.htm)
 - [Joy to the World](http://gardenofpraise.com/key21be.htm)
+- `songs/tulip.song` is a traditional Japanese folk song. 
 
 Snapshot
 --------
@@ -33,6 +35,7 @@ Snapshot
 
 Change log
 ----------
+Jun 03rd, 2009: Added a small comment about Paul's great work. Added one more song.    
 Jun 02nd, 2009: Wrote the drivers for Mac and Linux (v0.3). But not get a chance to run so far.     
 Jun 01st, 2009: Added more one song and improved the editing chrone function (v0.2).   
 May 31th, 2009: Added the hovering message function (v0.1a) and two songs.      
