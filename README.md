@@ -35,6 +35,7 @@ Snapshot
 
 Change log
 ----------
+Jun 04th, 2009: Updated to v0.4 which changes the keyboard color to the sound.   
 Jun 03rd, 2009: Added a small comment about Paul's great work. Added one more song.    
 Jun 02nd, 2009: Wrote the drivers for Mac and Linux (v0.3). But not get a chance to run so far.     
 Jun 01st, 2009: Added more one song and improved the editing chrone function (v0.2).   
@@ -46,7 +47,7 @@ To do list
 ----------
 
 - prepare drivers for Mac and Linux
-- change the keyboard color to the sound
+- change the keyboard color to the sound... done!
 - create more songs
 
 
