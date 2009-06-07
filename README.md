@@ -12,7 +12,8 @@ Piano v0.3 includes the drivers for Mac and Linux. But I have no Mac and Linux..
 **Hope someone attempt to run v0.3 on his/her Mac or Linux and let me know what happen.** ;-)
 
 - Jun 3rd: **Paul Harris** attempted to run v0.3 on his (k)ubuntu 9.04 with TiMIDIty. It worked well. Fantastic! Now need some connecting sequence by hand, so trying to find the easy way.
-- Jun 5th: **Willian Molinari** run v0.4 on his i686-linux. It didn't work and got the error message: libasound.so: cannot open shared object file: No such file or directory. Umm...
+- Jun 5th: **Willian Molinari** run v0.4 on his i686-linux. It didn't work and got the error message: libasound.so: cannot open shared object file: No such file or directory. ... His Ubuntu looks like to use Pulse instead of ALSA?
+- Jun 6th: **George Thompson** run v0.4 on his Mac, there was no error but no sound. Seems like something is missing...
 
 
 Usage
