@@ -5,7 +5,7 @@ OFF = 0x80
 PC  = 0xc0
 
 module C
-  extend DL::Importable
+  extend DL::Importer
   dlload 'winmm'
 
   extern "int midiOutOpen(HMIDIOUT*, int, int, int, int)"

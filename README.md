@@ -14,6 +14,7 @@ Piano v0.3 includes the drivers for Mac and Linux. But I have no Mac and Linux..
 - Jun 3rd: **Paul Harris** attempted to run v0.3 on his (k)ubuntu 9.04 with TiMIDIty. It worked well. Fantastic! Now need some connecting sequence by hand, so trying to find the easy way.
 - Jun 5th: **Willian Molinari** run v0.4 on his i686-linux. It didn't work and got the error message: libasound.so: cannot open shared object file: No such file or directory. ... His Ubuntu looks like to use Pulse instead of ALSA?
 - Jun 6th: **George Thompson** run v0.4 on his Mac, there was no error but no sound. Seems like something is missing...
+- Jun 12th, 2010: v0.4a is only for Windows. Ruby 1.9.1 includes DL2 as DL.
 
 
 Usage
@@ -30,6 +31,10 @@ Songs
 - [Sippin' Cider Through a Straw](http://gardenofpraise.com/key21t.htm)
 - [Joy to the World](http://gardenofpraise.com/key21be.htm)
 - `songs/tulip.song` is a traditional Japanese folk song. 
+- [Under the spreading chestnut tree](http://www.worldfolksong.com/songbook/usa/under_the_spreading.htm
+) - [score](http://ototama.com/folksong/ookinakurinokinoshitade.html)
+- [Grand Fathers\' Clock](http://www.geocities.jp/lune_monogatari/clock.html
+) - [score](http://www.geocities.jp/run8461/furudokei.html)
 
 Snapshot
 --------
@@ -38,6 +43,7 @@ Snapshot
 
 Change log
 ----------
+Jun 12th, 2010: Updated to v0.4a for Policeman and added two more new songs.   
 Jun 04th, 2009: Updated to v0.4 which changes the keyboard color to the sound.   
 Jun 03rd, 2009: Added a small comment about Paul's great work. Added one more song.    
 Jun 02nd, 2009: Wrote the drivers for Mac and Linux (v0.3). But not get a chance to run so far.     
@@ -67,3 +73,6 @@ References
 - [Piano Chord CLIP](http://www.piano-c.com/pianoClip.html) (Japanese)
 - [Ruby/DL](http://ttsky.net/ruby/ruby-dl.html)
 - [MSDN Library](http://msdn.microsoft.com/en-us/library/default.aspx) - <a href="http://msdn.microsoft.com/en-us/library/ms711632(VS.85).aspx">midiOutOpen</a>, <a href="http://msdn.microsoft.com/en-us/library/ms711632(VS.85).aspx">midiOutShortMsg</a>
+- [ruby-dl2](http://wiki.livedoor.jp/aqualung/d/ruby-dl2)
+- [support dl2 incompletely](http://vvvvvv.sakura.ne.jp/ds14050/diary/20061030.html)
+

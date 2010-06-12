@@ -5,7 +5,7 @@ class MIDI
   include C
 
   def initialize
-    @device = DL.malloc(DL.sizeof('I'))
+    @device = DL::CPtr.malloc(DL::SIZEOF_INT)
     C.midiOutOpen @device, -1, 0, 0, 0
   end
 

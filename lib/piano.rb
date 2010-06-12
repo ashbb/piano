@@ -1,13 +1,13 @@
 # piano.rb
-info PLATFORM
+#info RUBY_PLATFORM
 
-require case PLATFORM
-  when /mswin/ : 'midi_win'
-  when /darwin/ : 'midi_mac'
+require case RUBY_PLATFORM
+  when /mswin|mingw/ ; 'midi_win'
+  when /darwin/ ; 'midi_mac'
   else 'midi_linux' end
 require 'piano_methods'
 
-Shoes.app :width => 440, :height => 240, :title => 'piano v0.4' do
+Shoes.app :width => 440, :height => 240, :title => 'piano v0.4a' do
   extend PianoMethods
   keyboards = display_piano
   
@@ -32,7 +32,7 @@ Shoes.app :width => 440, :height => 240, :title => 'piano v0.4' do
   para link('auto'){
     data = eval("[#{@eb.text}]")
     a = animate 100 do |i|
-      a.remove if data.empty?
+      a.stop if data.empty?
       mn, len = data.shift
       nn = ''
       keyboards.each{|kb|
