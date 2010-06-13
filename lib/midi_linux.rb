@@ -5,13 +5,13 @@ class MIDI
   include C
   
   def initialize
-    @output = DL::PtrData.new(nil)
+    @output = DL::CPtr.new(DL::NULL)
     C.snd_rawmidi_open(nil, @output.ref, "virtual", 0)
   end
 
   def message(*args)
     format = "C" * args.size
-    bytes = args.pack(format).to_ptr
+    bytes = DL::CPtr[args.pack(format)]
     C.snd_rawmidi_write(@output, bytes, args.size)
     C.snd_rawmidi_drain(@output)
   end

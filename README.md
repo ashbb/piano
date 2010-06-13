@@ -43,6 +43,7 @@ Snapshot
 
 Change log
 ----------
+Jun 13th, 2010: Edited a little bit for Policeman Linux. Then there was no error but still no sound. :(   
 Jun 12th, 2010: Updated to v0.4a for Policeman and added two more new songs.   
 Jun 04th, 2009: Updated to v0.4 which changes the keyboard color to the sound.   
 Jun 03rd, 2009: Added a small comment about Paul's great work. Added one more song.    

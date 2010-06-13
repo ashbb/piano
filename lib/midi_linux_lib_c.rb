@@ -5,7 +5,7 @@ OFF = 0x80
 PC  = 0xc0
 
 module C
-  extend DL::Importable
+  extend DL::Importer
   dlload 'libasound.so'
 
   extern "int snd_rawmidi_open(void*, void*, char*, int)"
